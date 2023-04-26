@@ -10,7 +10,7 @@ export const Shoe = ({u}) => {
   const navigate = useNavigate();
   const HandleClick=e=>{
     e.preventDefault();
-    navigate(`/shoe/${u.id}`);
+    navigate(`/shoes/${u.id}`);
   
   }
   return (

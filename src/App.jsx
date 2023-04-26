@@ -7,12 +7,14 @@ import { Layout } from './pages/Layout'
 import ShoePage from './pages/ShoePage'
 import CartPage from './pages/CartPage'
 import { CheckoutPage } from './pages/CheckoutPage'
+import { ProductPage } from './pages/ProductPage'
 
 function App() {
   return(<Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<HomePage />} />
       <Route path="/shoe/:id" element={<ShoePage />} />
+      <Route path="/shoes/:id" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
       

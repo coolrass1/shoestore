@@ -8,11 +8,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import{shoeReducer} from './reducers/shoes'
 import  cartReducer from './reducers/cartslice'
+import { shoeApi } from './rtk/shoes'
+import {store} from './rtk/store'
 
-const store = configureStore( {reducer: {
+/*const store = configureStore( {reducer: {
   shoes:shoeReducer,
   cart: cartReducer,
-}},)
+  
+}},)*/
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
