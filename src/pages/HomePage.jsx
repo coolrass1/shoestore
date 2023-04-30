@@ -56,7 +56,7 @@ const HomePage = () => {
 
       <Row style={{ marginTop: "35px" }}>
         {post.entities.map((u) => (
-          <Shoe u={u} />
+          <Shoe key={JSON.stringify(u)}u={u} />
         ))}
       </Row>
     </Row>

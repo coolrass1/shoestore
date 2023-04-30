@@ -37,6 +37,9 @@ export const shoeApi = createApi({
     getShoe: build.query({
       query: (id) => `${id}`,
       providesTags: (result, error, id) => [{ type: 'Shoes', id }],
+      transformResponse:arg=>{return Object.assign({shoe:{id:arg.id,shoename:arg.shoename,description:arg.description, imageUrl:arg.imageUrl},
+
+       price:arg.price})}
     }),
     updateShoe: build.mutation({
       query(data) {

@@ -10,18 +10,18 @@ export const Shoe = ({u}) => {
   const navigate = useNavigate();
   const HandleClick=e=>{
     e.preventDefault();
-    navigate(`/shoes/${u.id}`);
+    navigate(`/shoes/${u.shoe.id}`);
   
   }
   return (
-    <Col xs={12} md={6} lg={3}style={{marginTop:"8px"}}>
+    <Col xs={12} md={6} lg={3}style={{marginTop:"8px", zIndex:"0"}}>
 
 <Card  className="shadow" onClick={HandleClick}>
-      <Card.Img variant="top" src={u.imageUrl} />
+      <Card.Img variant="top" src={u.shoe.imageUrl} />
       <Card.Body>
-        <Card.Title>{u.name}</Card.Title>
+        <Card.Title>{u.shoe.shoename}</Card.Title>
         <Card.Text>
-          {u.description}
+          {u.shoe.description}
         </Card.Text>
         <Button variant="primary">View</Button>
       </Card.Body>

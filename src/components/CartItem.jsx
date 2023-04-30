@@ -29,11 +29,11 @@ export const CartItem = ({ item }) => {
       <Col md={2}>
         <Image
           style={{ height: "100%", width: "100%", objectFit: "cover" }}
-          src={item.imageUrl}
+          src={item.shoe.imageUrl}
           rounded
         />
       </Col>
-      <Col md={2}>{item.name}</Col>
+      <Col md={2}> {item.shoe.shoename}</Col>
       <Col md={2}>{item.price}</Col>
       <Col md={3}>
         {" "}

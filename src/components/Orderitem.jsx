@@ -7,10 +7,10 @@ export const Orderitem = ({ item }) => {
       <Col md={2}>
         <Image
           style={{ height: "100%", width: "100%", objectFit: "cover" }}
-          src={item.imageUrl}
+          src={item.shoe.imageUrl}
         />
       </Col>
-      <Col> {item.name}</Col>
+      <Col> {item.shoe.shoename}</Col>
       <Col>{item.qty}x{item.price}</Col>
     </Row>
   );

@@ -23,8 +23,15 @@ export const shoeSlice = createSlice({
   reducers: {},
   extraReducers: {
     [getShoes.fulfilled]: (state, action) => {
-      console.log(action.payload);
-      state.entities = action.payload;
+     
+      // const rass={   shoe:{id:cc.id,shoename:cc.shoename,description:cc.description, imageUrl:cc.imageUrl},
+      //   qty:cc.qty,
+      //   price:cc.price}
+        const rock= action.payload.map(cc=>({   shoe:{id:cc.id,shoename:cc.shoename,description:cc.description, imageUrl:cc.imageUrl},
+          qty:0,
+          price:cc.price}))
+          console.log(rock)
+      state.entities = rock;
     },
   },
 });
